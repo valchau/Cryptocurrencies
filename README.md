@@ -14,7 +14,7 @@ Unsupervised learning is often used in one of the following two ways:
 
 ### Steps
 Preprocessing the raw cyptocurrency data <br>
-<p>
+
 Before an unsupervised machine process is started, it is always important to ensure that the input data is suitable for this analysis. Therefore, an initial analysis and cleanup of the raw data was performed.
 1. The raw data, provided in a csv file was read into a Python pandas DataFrame, whose columns (features or variables) were reviwed along with determing the datatype of each column.
 2. The file was checked for duplicate rows; there were none, but if there had been, duplicate data rows would be dropped. Each row represents a different cryocurrency. 
@@ -26,7 +26,7 @@ Before an unsupervised machine process is started, it is always important to ens
 8. The Algorithm and ProofType columns with string values were converted to integer values using the 'getdummies()' method of DataFrame objects
 9. The data at this point contained only columns (features/variables) with numeric values, but these could not be compared accurately since they were not all scaled the same. So a StandardScaler object from Python's sklearn.preprocessing library was used to rescale all variables to standardized normal distributions.
 10. Finally, the preprocessing steps culminated in creation of a new clean data file to be used for Principal Component Analysis. 
-</p>
+
 Using Principal Component Analysis <br>
 We use transformations when we need to take raw data and make it easier to understand. Transformations also can help prepare data so that it can be used for other machine learning algorithms. One method we used is Principle Component Analysis.
 
