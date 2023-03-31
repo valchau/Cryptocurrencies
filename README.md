@@ -49,7 +49,12 @@ One way to do this is called the elbow curve. This is a graphical representation
 1. An elbow curve was created to show that 3 principal components is likely to explain suffiently most of the variance
 2. a KMeans object was created asking for 4 clusters, and its fit() method was used to fit the 3 PC data into its model and then
 3. the KMeans object's predict() method was called so that it would predict the clusters of data for us
-4. A new pandas DataFrame was created from the PCA resulting data, along with the Algorithm, Prooftype, TotalCoinsMined, TotalCoinsSupplied and the prediction data.
+4. A new pandas DataFrame was created from the PCA resulting data, along with the Algorithm, Prooftype, TotalCoinsMined, TotalCoinsSupply and the prediction data.
 5. This new DataFrame was then used to create a 3-Dimenional Scatterplot. 
 
+Wrapping up<br>
+
+1. the hvplot object from pandas was used to create a new table of the tradable crytopcurrencies and gives us the total tradable currencies as 532 from this data. 
+2. Finally a simplifed DataFrame, consisting only of the cryptocurrency name, its TotalCoinsMined, TotalCoinsSupply, CoinName and prediction we created 
+3. a ScatterPLot was made of this simple information to help the bank decide.
 
