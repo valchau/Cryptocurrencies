@@ -66,7 +66,14 @@ One way to do this is called the elbow curve. This is a graphical representation
 2. a KMeans object was created asking for 4 clusters, and its fit() method was used to fit the 3 PC data into its model and then
 3. the KMeans object's predict() method was called so that it would predict the clusters of data for us
 4. A new pandas DataFrame was created from the PCA resulting data, along with the Algorithm, Prooftype, TotalCoinsMined, TotalCoinsSupply and the prediction data.
-5. This new DataFrame was then used to create a 3-Dimenional Scatterplot. 
+
+<br>
+<img src="https://github.com/valchau/Cryptocurrencies/blob/main/cryptoDataBeingMinedGivenIsTraded.PNG" alt="data of mined crypto trading" width="500" height="500" >
+<br>
+
+6. This new DataFrame was then used to create a 3-Dimenional Scatterplot. 
+
+
 
 Wrapping up<br>
 
