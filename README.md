@@ -20,7 +20,7 @@ Before an unsupervised machine process is started, it is always important to ens
 
 Here is the data file at the start: 
 <br>
-<img src="https://github.com/valchau/Cryptocurrencies/blob/main/crytoDataAtStart.PNG" alt="data to start" width="500" height="500" >
+<img src="https://github.com/valchau/Cryptocurrencies/blob/main/crytoDataAtStart.PNG" alt="data to start" width="600" height="500" >
 <br>
 
 1. The raw data, provided in a csv file was read into a Python pandas DataFrame, whose columns (features or variables) were reviwed along with determing the datatype of each column.
@@ -28,7 +28,7 @@ Here is the data file at the start:
 3. Cryptocurrencies not marked as 'trading' were dropped, because this analysis is designed to focus on cyptocurrencies that are currently being traded. Following this step, the column that marked whether a currency was being traded was removed as it is no longer needed. Here are the trading crypocurrencies: 
 
 <br>
-<img src="https://github.com/valchau/Cryptocurrencies/blob/main/crytoDataISTrading.PNG" alt="data of crypto trading" width="500" height="500" >
+<img src="https://github.com/valchau/Cryptocurrencies/blob/main/crytoDataISTrading.PNG" alt="data of crypto trading" width="600" height="500" >
 <br>
 
 5. Unnecessary columns for our chosen analysis such as the 'unnamed' column were also removed.
@@ -36,7 +36,7 @@ Here is the data file at the start:
 7. Because this analysis will focus and cryptocurrenies that are both being traded and also being mined, rows whose totalcoinsmined is not > 0 were dropped. Here are the cryptocurrencies being mined that are traded: 
 
 <br>
-<img src="https://github.com/valchau/Cryptocurrencies/blob/main/cryptoDataBeingMinedGivenIsTraded.PNG" alt="data of mined crypto trading" width="500" height="500" >
+<img src="https://github.com/valchau/Cryptocurrencies/blob/main/cryptoDataBeingMinedGivenIsTraded.PNG" alt="data of mined crypto trading" width="600" height="500" >
 <br>
 
 9. The coinname column was dropped since it won't be used in the numeric analysis.
@@ -68,12 +68,12 @@ One way to do this is called the elbow curve. This is a graphical representation
 4. A new pandas DataFrame was created from the PCA resulting data, along with the Algorithm, Prooftype, TotalCoinsMined, TotalCoinsSupply and the prediction data.
 
 <br>
-<img src="https://github.com/valchau/Cryptocurrencies/blob/main/crytoDataClustered%23PCAPNG.PNG" alt="data with PCA applied" width="500" height="500" >
+<img src="https://github.com/valchau/Cryptocurrencies/blob/main/crytoDataClustered%23PCAPNG.PNG" alt="data with PCA applied" width="600" height="500" >
 <br>
 
 6. This new DataFrame was then used to create a 3-Dimenional Scatterplot. 
 <br>
-<img src="https://github.com/valchau/Cryptocurrencies/blob/main/cryto3DScatterPlotWithClusters.PNG" alt="Scatterplot" width="500" height="500" >
+<img src="https://github.com/valchau/Cryptocurrencies/blob/main/cryto3DScatterPlotWithClusters.PNG" alt="Scatterplot" width="600" height="500" >
 <br>
 
 
