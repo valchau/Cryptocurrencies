@@ -33,11 +33,16 @@ Here is the data file at the start:
 
 5. Unnecessary columns for our chosen analysis such as the 'unnamed' column were also removed.
 6. Columns with 1 or more missing or null values were removed so that data being used for computations has no missing or out of range values.
-7. Because this analysis will focus and cryptocurrenies that are both being traded and also being mined, rows whose totalcoinsmined is not > 0 were dropped. 
-8. The coinname column was dropped since it won't be used in the numeric analysis.
-9. The Algorithm and ProofType columns with string values were converted to integer values using the 'getdummies()' method of DataFrame objects
-10. The data at this point contained only columns (features/variables) with numeric values, but these could not be compared accurately since they were not all scaled the same. So a StandardScaler object from Python's sklearn.preprocessing library was used to rescale all variables to standardized normal distributions.
-11. Finally, the preprocessing steps culminated in creation of a new clean data file to be used for Principal Component Analysis, containing only the numeric data values and column headings were saved in a separate DataFrame to be used later.
+7. Because this analysis will focus and cryptocurrenies that are both being traded and also being mined, rows whose totalcoinsmined is not > 0 were dropped. Here are the cryptocurrencies being mined that are traded: 
+
+<br>
+<img src="https://github.com/valchau/Cryptocurrencies/blob/main/cryptoDataBeingMinedGivenIsTraded.PNG" alt="data of mined crypto trading" width="500" height="500" >
+<br>
+
+9. The coinname column was dropped since it won't be used in the numeric analysis.
+10. The Algorithm and ProofType columns with string values were converted to integer values using the 'getdummies()' method of DataFrame objects
+11. The data at this point contained only columns (features/variables) with numeric values, but these could not be compared accurately since they were not all scaled the same. So a StandardScaler object from Python's sklearn.preprocessing library was used to rescale all variables to standardized normal distributions.
+12. Finally, the preprocessing steps culminated in creation of a new clean data file to be used for Principal Component Analysis, containing only the numeric data values and column headings were saved in a separate DataFrame to be used later.
 
 Using Principal Component Analysis <br>
 
