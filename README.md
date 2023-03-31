@@ -1,5 +1,6 @@
 # Cryptocurrencies Analysis
 ## Overview 
+This task's scenario tells us that I have an important investment bank as a client and this bank wants to offer a new cryptocurrency. Persoanlly, I would never suggest that anyone, especially a US bank, invest in such a thing because they are unregulated as well as not backed by any real assets such as gold or even a government. My MBA in Finance does not predict a good outcome for anyone who is not controlling such unregulated and non collateraized 'investments.' However, this task asks me to pretend that I am willing to work with such an scenario and provide a bank with advice relating to currently traded and mined cryptocurreinces. 
 
 ### Concepts
 Module 19 teaches us about unsupervised machine learning; there are two key differences from supervised machine learning:
@@ -41,5 +42,9 @@ Thus, one way to interpret the data in a more meaningful way is to reduce the nu
 
 
 Clustering the remaining variables using K Means <br>
-After transforming raw data into machine learning usuable format (standardized numeric values), we used K-Means Clustering to create visualizations of the data.
+
+After transforming our many variables into 3 principal component variables, the sklearn.cluster object KMeans was used to create an interesting 3 dimensional visualization of the data. K-means clustering is one of the most used clustering algorithms in data science. To successfully implement the K-means algorithm, we need to identify the number of clusters we want to create using the K-means. 
+
+One way to do this is called the elbow curve. This is a graphical representation of finding the optimal ‘K’ in K-means clustering for a set of data. It works by finding WCSS (Within-Cluster Sum of Square) i.e. the sum of the square distance between points in a cluster and the cluster centroid. The elbow curve shows WCSS values(on the y-axis) corresponding to the different values of K(on the x-axis). When we see an **elbow shape ** in the graph, we pick the K-value where the elbow gets created. We can call this point the Elbow point. Beyond the Elbow point, increasing the value of ‘K’ does not lead to a significant reduction in WCSS.
+
 
