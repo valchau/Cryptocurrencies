@@ -13,7 +13,7 @@ Unsupervised learning is often used in one of the following two ways:
 <br>
 
 ### Steps
-Preprocessing the raw cyptocurrency data <br>
+Preparing the raw cyptocurrency data <br>
 
 Before an unsupervised machine process is started, it is always important to ensure that the input data is suitable for this analysis. Therefore, an initial analysis and cleanup of the raw data was performed.
 1. The raw data, provided in a csv file was read into a Python pandas DataFrame, whose columns (features or variables) were reviwed along with determing the datatype of each column.
@@ -25,10 +25,19 @@ Before an unsupervised machine process is started, it is always important to ens
 7. The coinname column was dropped since it won't be used in the numeric analysis.
 8. The Algorithm and ProofType columns with string values were converted to integer values using the 'getdummies()' method of DataFrame objects
 9. The data at this point contained only columns (features/variables) with numeric values, but these could not be compared accurately since they were not all scaled the same. So a StandardScaler object from Python's sklearn.preprocessing library was used to rescale all variables to standardized normal distributions.
-10. Finally, the preprocessing steps culminated in creation of a new clean data file to be used for Principal Component Analysis. 
+10. Finally, the preprocessing steps culminated in creation of a new clean data file to be used for Principal Component Analysis, containing only the numeric data values and column headings were saved in a separate DataFrame to be used later.
 
 Using Principal Component Analysis <br>
-We use transformations when we need to take raw data and make it easier to understand. Transformations also can help prepare data so that it can be used for other machine learning algorithms. One method we used is Principle Component Analysis.
+
+We use transformations when we need to take raw data and make it easier to understand. Transformations also can help prepare data so that it can be used for other machine learning algorithms such as clustering. With a large number of variables, the data matrix may be too large to study and interpret properly. There would be too many pairwise correlations between the variables to consider. Graphical displays may also not be particularly helpful when the data set is very large.  
+
+Thus, one way to interpret the data in a more meaningful way is to reduce the number of variables to a few linear combinations of the variables that each contain unique parts of the whole data. Each linear combination will correspond to a principal component in PCA. In this task, we were told to use 3 Principal Components. However, in many real world situation, the data analyst will need to try out different numbers of Principal Components in order to account for as much of the data's overall variance as the task requires. it isn't always 3. 
+1. The first principal component is the linear combination of x-variables that has maximum variance (among all linear combinations).  This first Principal Component accounts for as much variation in the data as possible. 
+2. The second principal component is the linear combination of x-variables that accounts for as much of the remaining variation as possible, with the constraint that the correlation between the first and second component is 0, i.e. they are mathematically orthogonal .
+3. For our third component, again it is a linear combination of the given x-variables, but must be orthogonal mathematically to both the first and second principal components. In general: all principal components have this same property – they are linear combinations that account for as much of the remaining variation as possible and they are not correlated at all with the other principal components.
+4. to achieve this PCA analysis with 3 principal components using Python, we create a PCA object from the sklearn.decomposition library and then invoke that object's fit_transform() method, passing in our data. 
+5. Finally a new pandas DataFrame was created from this data, using the column headings PC 1, PC 2, PC 3, so that each of the cryptocurrencies in the DataFrame has its resulting data shown as a linear combination of the three principal components.
+
 
 Clustering the remaining variables using K Means <br>
 After transforming raw data into machine learning usuable format (standardized numeric values), we used K-Means Clustering to create visualizations of the data.
