@@ -17,6 +17,11 @@ Unsupervised learning is often used in one of the following two ways:
 Preparing the raw cyptocurrency data <br>
 
 Before an unsupervised machine process is started, it is always important to ensure that the input data is suitable for this analysis. Therefore, an initial analysis and cleanup of the raw data was performed.
+
+Here is the data file at the start: 
+<br>
+<img src="https://github.com/valchau/Cryptocurrencies/main/crytoDataAtStart.PNG" alt="data to start" width="500" height="500" >
+<br>
 1. The raw data, provided in a csv file was read into a Python pandas DataFrame, whose columns (features or variables) were reviwed along with determing the datatype of each column.
 2. The file was checked for duplicate rows; there were none, but if there had been, duplicate data rows would be dropped. Each row represents a different cryocurrency. 
 3. Cryptocurrencies not marked as 'trading' were dropped, because this analysis is designed to focus on cyptocurrencies that are currently being traded. Following this step, the column that marked whether a currency was being traded was removed as it is no longer needed.
