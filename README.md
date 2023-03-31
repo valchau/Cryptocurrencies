@@ -68,11 +68,13 @@ One way to do this is called the elbow curve. This is a graphical representation
 4. A new pandas DataFrame was created from the PCA resulting data, along with the Algorithm, Prooftype, TotalCoinsMined, TotalCoinsSupply and the prediction data.
 
 <br>
-<img src="https://github.com/valchau/Cryptocurrencies/blob/main/cryptoDataBeingMinedGivenIsTraded.PNG" alt="data of mined crypto trading" width="500" height="500" >
+<img src="https://github.com/valchau/Cryptocurrencies/blob/main/crytoDataClustered%23PCAPNG.PNG" alt="data with PCA applied" width="500" height="500" >
 <br>
 
 6. This new DataFrame was then used to create a 3-Dimenional Scatterplot. 
-
+<br>
+<img src="https://github.com/valchau/Cryptocurrencies/blob/main/cryto3DScatterPlotWithClusters.PNG" alt="Scatterplot" width="500" height="500" >
+<br>
 
 
 Wrapping up<br>
