@@ -45,6 +45,11 @@ Clustering the remaining variables using K Means <br>
 
 After transforming our many variables into 3 principal component variables, the sklearn.cluster object KMeans was used to create an interesting 3 dimensional visualization of the data. K-means clustering is one of the most used clustering algorithms in data science. To successfully implement the K-means algorithm, we need to identify the number of clusters we want to create using the K-means. 
 
-One way to do this is called the elbow curve. This is a graphical representation of finding the optimal ‘K’ in K-means clustering for a set of data. It works by finding WCSS (Within-Cluster Sum of Square) i.e. the sum of the square distance between points in a cluster and the cluster centroid. The elbow curve shows WCSS values(on the y-axis) corresponding to the different values of K(on the x-axis). When we see an **elbow shape ** in the graph, we pick the K-value where the elbow gets created. We can call this point the Elbow point. Beyond the Elbow point, increasing the value of ‘K’ does not lead to a significant reduction in WCSS.
+One way to do this is called the elbow curve. This is a graphical representation of finding the optimal ‘K’ in K-means clustering for a set of data. It works by finding WCSS (Within-Cluster Sum of Square) i.e. the sum of the square distance between points in a cluster and the cluster centroid. The elbow curve shows WCSS values(on the y-axis) corresponding to the different values of K(on the x-axis). When we see a bend that looks like an elbow in the graph, we pick the K-value where the elbow gets created. We can call this point the elbow point since after this point in the graph, increasing the value of ‘K’ does not lead to a significant reduction in WCSS. Now, not all data will show a clear elbow bend, but this data does. 
+1. An elbow curve was created to show that 3 principal components is likely to explain suffiently most of the variance
+2. a KMeans object was created asking for 4 clusters, and its fit() method was used to fit the 3 PC data into its model and then
+3. the KMeans object's predict() method was called so that it would predict the clusters of data for us
+4. A new pandas DataFrame was created from the PCA resulting data, along with the Algorithm, Prooftype, TotalCoinsMined, TotalCoinsSupplied and the prediction data.
+5. This new DataFrame was then used to create a 3-Dimenional Scatterplot. 
 
 
